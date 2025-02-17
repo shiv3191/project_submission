@@ -6,9 +6,9 @@ app.use(express.json());
 app.use(cors());
 const PORT=process.env.PORT || 3001;
 
-mongoose.connect("mongodb://127.0.0.1:27017/finance")
-.then(()=>console.log("connect to db"))
-.catch((err)=>console.log(err));
+mongoose.connect("mongodb+srv://shivp8105:<your_password>@personalfinancetracker.tpm9a.mongodb.net/")
+  .then(() => console.log("Connected to DB"))
+  .catch((err) => console.log(err));
 
 const financialRecordSchema = new mongoose.Schema({
     userId: { type: String, required: true },
